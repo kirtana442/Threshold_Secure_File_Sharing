@@ -75,7 +75,7 @@ pip install -r requirements.txt
 Encrypt a file and generate the threshold shares:
 
 ```bash
-python threshold_share/encrypt.py secret.txt output
+python encrypt.py secret.txt output
 ```
 **Generated Artifacts:** `encrypted_file.bin`, `metadata.json`, `signature.bin`, `public_key.pem`, and `share_N.bin`.
 
@@ -83,7 +83,7 @@ python threshold_share/encrypt.py secret.txt output
 Reconstruct the master key using the required threshold of shares:
 
 ```bash
-python threshold_share/decrypt.py output output/share_1.bin output/share_2.bin
+python decrypt.py output output/share_1.bin output/share_2.bin
 ```
 **Result:** `decrypted_file.bin`
 
